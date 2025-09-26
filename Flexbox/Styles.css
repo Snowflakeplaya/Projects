@@ -5,7 +5,88 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #b4b4b4;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px;
+    font-weight: 17px;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+.container > div {
+    flex: 100%;
+}
+
+.subcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    background: #123;
+    border-radius: 10px;
+}
+
+.sidebar {
+    flex: 1;
+    background: crimson;
+}
+
+.main-container {
+    flex: 4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.main-container > div {
+    flex: 100%;
+}
+
+h4 {
+    padding: 10px;
+}
+
+.main {
+    min-height: 250px;
+    background: #3c3c;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.content1, .content2, .content3 {
+   min-height: 200px;
+   background: lightskyblue;
+   flex: 1;
+}
+
+.footer {
+    flex: 100%;
+    min-height: 50px;
+    background: #123;
+}
+
+.sidebar, .main, .content > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
