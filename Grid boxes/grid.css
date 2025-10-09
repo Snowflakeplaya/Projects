@@ -17,7 +17,7 @@ body {
     display: grid;
     grid-template-areas:
         "nav nav nav"
-        "intro intro intro"
+        "sidebar intro intro"
         "sidebar content1 content2"
         "sidebar content3 content4"
         "footer footer footer";
