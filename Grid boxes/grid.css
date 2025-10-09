@@ -17,11 +17,12 @@ body {
     display: grid;
     grid-template-areas:
         "nav nav nav"
+        "intro intro intro"
         "sidebar content1 content2"
         "sidebar content3 content4"
         "footer footer footer";
     grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
     gap: 10px;
     height: 100%;
     width: 96vw;
@@ -40,6 +41,16 @@ body {
 .sidebar {
     grid-area: sidebar;
     background-color: #2196F3;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.intro {
+    grid-area: intro;
+    background-color: #ff5722;
     color: white;
     display: flex;
     align-items: center;
