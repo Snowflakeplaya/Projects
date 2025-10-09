@@ -4,6 +4,8 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+      
+
 
         {
             "name": "Launch Chrome",
@@ -23,6 +25,12 @@
       "request": "launch",
       "name": "Launch Tribute Page",
       "file": "${workspaceFolder}/Tribute Page/Tribute Page.html"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Portfolio New",
+      "file": "${workspaceFolder}/Portfolio New/Portfolio New.html"
     }
     ]
 }
