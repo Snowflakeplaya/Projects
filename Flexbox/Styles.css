@@ -45,6 +45,8 @@ body {
 .sidebar {
     flex: 1;
     background: crimson;
+    min-height: 250px;
+    border-radius: 10px;
 }
 
 .main-container {
