@@ -28,7 +28,7 @@ body {
 
 .fa:hover {
   background: var(--second);
-  color: red;
+  color: blue;
 }
 
 #navbar {
