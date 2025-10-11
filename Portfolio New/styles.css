@@ -102,6 +102,7 @@ a:hover {
     height: 300px;
     width: 90%;
     background-color: #0a2f61;
+    margin: auto;
 }
 
 .project-tile img {
