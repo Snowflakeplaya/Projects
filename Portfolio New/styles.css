@@ -11,6 +11,10 @@
     --text-color: #000;
 }
 
+body {
+    background-color: #d3d3d3;
+}
+
 .main-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -69,7 +73,7 @@ a:hover {
 
 .intro {
     grid-row: 2 / 3;
-    background-color: #f1f1f1;
+    background-color: #d3d3d3;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,10 +91,10 @@ a:hover {
 
 .projects {
     grid-row: 3 / 4;
-    background-color: #e2e2e2;
+    background-color: #d3d3d3;
     display: grid;
     grid-template-columns: repeat(2, minmax(200px, 1fr));
-    gap: 10px;
+    gap: 50px;
     padding: 10px;
     align-items: center;
     justify-content: center;
@@ -103,6 +107,7 @@ a:hover {
     width: 90%;
     background-color: #0a2f61;
     margin: auto;
+    max-width: 450px;
 }
 
 .project-tile img {
@@ -158,12 +163,13 @@ a:hover {
     text-decoration: none;
     margin: 5px 2px;
     background-color: var(--accent-color);
+    min-height: 44px;
 }
 
 .fa:hover {
     opacity: 0.7;
     transform: scale(1.1);
-    color: blue;
+    color: yellow;
 }
 
 .footer {
@@ -179,4 +185,35 @@ a:hover {
 
 p {
     margin: 10px 0;
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .project-tile {
+        width: 60%;
+    }
+    .navbar {
+        font-size: 20px;
+        height: 10vh;
+    }
+
+    .intro {
+        font-size: 18px;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        margin: 0 30px;
+    }
+
+    .contacts {
+        font-size: 18px;
+        height: 35vh;
+    }
 }
