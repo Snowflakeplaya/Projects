@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Derivative of Logarithmic Functions - Study Guide</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use 'Inter' font and a modern color scheme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-blue': '#1D4ED8', // Darker Blue
+                        'primary-bg': '#F8FAFC', // Light background
+                        'accent-teal': '#14B8A6', // Accent color for headers
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Load MathJax for professional mathematical rendering -->
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+        /* Define a print-friendly container for PDF generation */
+        .study-guide-page {
+            width: 8.5in;
+            min-height: 11in;
+            margin: 0 auto;
+            padding: 1in;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        /* Enforce page breaks for multi-page look when printing */
+        @media print {
+            body {
+                background: none;
+            }
+            .study-guide-page {
+                box-shadow: none;
+                margin: 0;
+                page-break-after: always;
+            }
+            .study-guide-page:last-child {
+                page-break-after: avoid;
+            }
+        }
+
+        /* Custom styling for the formula boxes */
+        .formula-box {
+            border-radius: 0.5rem;
+            padding: 1rem;
+            border-left: 5px solid #14B8A6; /* Accent teal bar */
+            background-color: #f0fdfa; /* Light teal background */
+            font-size: 1.125rem;
+        }
+
+        /* Custom styling for the example cards */
+        .example-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            border: 1px solid #E0E7FF;
+        }
+
+    </style>
+</head>
+<body class="bg-primary-bg font-sans py-8">
+
+    <!-- Page 1 -->
+    <div class="study-guide-page">
+        <header class="text-center mb-12 border-b-4 border-primary-blue pb-4">
+            <h1 class="text-5xl font-extrabold text-primary-blue mb-2">
+                Logarithmic Derivatives
+            </h1>
+            <p class="text-xl text-gray-600 italic">
+                A Professional Study Guide: Core Formulas and Worked Examples
+            </p>
+        </header>
+
+        <section class="mb-10">
+            <h2 class="text-3xl font-bold text-accent-teal mb-4 flex items-center">
+                1. Derivatives of the Natural Logarithm ($\ln x$)
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7 ml-3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008V15h-.008Z" />
+                </svg>
+            </h2>
+
+            <p class="text-gray-700 mb-6 leading-relaxed">
+                The natural logarithm, $\ln x$, is the logarithm to the base $e$. Its derivative forms the foundational rule for all logarithmic functions. The core formula relies on the **Chain Rule**, where $u$ represents any differentiable function of $x$. 
+            </p>
+
+            <!-- Core Formula Box -->
+            <div class="formula-box mb-8">
+                <p class="font-bold text-gray-800">
+                    The General Rule for Natural Log:
+                </p>
+                $$ D_x[\ln u] = \frac{u'}{u} $$
+                <p class="text-sm text-gray-500 mt-2">
+                    *Where $u$ is the inside function and $u'$ is its derivative.*
+                </p>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-primary-blue mt-8 mb-4">
+                Key Examples and Techniques
+            </h3>
+
+            <div class="space-y-6">
+                <!-- Example 1: Basic & Polynomial -->
+                <div class="example-card">
+                    <h4 class="font-bold text-lg mb-2 text-gray-800">Example A: Polynomial Inside (Chain Rule)</h4>
+                    <p class="mb-1">
+                        Find $D_x[\ln(x^2 + 4)]$
+                    </p>
+                    <p class="text-sm italic text-gray-600">
+                        Here, $u = x^2 + 4$ and $u' = 2x$.
+                    </p>
+                    <p class="mt-2 font-mono bg-gray-50 p-2 rounded">
+                        $$ D_x[\ln(x^2 + 4)] = \frac{u'}{u} = \frac{2x}{x^2 + 4} $$
+                    </p>
+                </div>
+
+                <!-- Example 2: Logarithm Properties (Simplification) -->
+                <div class="example-card">
+                    <h4 class="font-bold text-lg mb-2 text-gray-800">Example B: Using Log Properties ($\ln u^n = n \ln u$)</h4>
+                    <p class="mb-1">
+                        Find $D_x[\ln x^3]$.
+                    </p>
+                    <p class="text-sm italic text-gray-600">
+                        Simplify first: $\ln x^3 = 3 \ln x$.
+                    </p>
+                    <p class="mt-2 font-mono bg-gray-50 p-2 rounded">
+                        $$ D_x[3 \ln x] = 3 \cdot D_x[\ln x] = 3 \cdot \frac{1}{x} = \frac{3}{x} $$
+                    </p>
+                </div>
+
+                <!-- Example 3: Trigonometric Inside -->
+                <div class="example-card">
+                    <h4 class="font-bold text-lg mb-2 text-gray-800">Example C: Trigonometric Functions</h4>
+                    <p class="mb-1">
+                        Find $D_x[\ln(\sin x)]$
+                    </p>
+                    <p class="text-sm italic text-gray-600">
+                        Here, $u = \sin x$ and $u' = \cos x$.
+                    </p>
+                    <p class="mt-2 font-mono bg-gray-50 p-2 rounded">
+                        $$ D_x[\ln(\sin x)] = \frac{\cos x}{\sin x} = \cot x $$
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="study-guide-page mt-8">
+        <section class="mb-10">
+            <h2 class="text-3xl font-bold text-accent-teal mb-4 flex items-center">
+                2. Derivatives of General Logarithms ($\log_a x$)
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7 ml-3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-6 3h18a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 13.5m18 0a2.25 2.25 0 0 0-2.25-2.25H4.5a2.25 2.25 0 0 0-2.25 2.25m18 0V12m-6 6V12" />
+                </svg>
+            </h2>
+
+            <p class="text-gray-700 mb-6 leading-relaxed">
+                When the base of the logarithm is any number $a$ (where $a > 0, a \neq 1$) instead of $e$, an extra term is introduced to the denominator. This term is simply $\ln a$.
+            </p>
+
+            <!-- Core Formula Box for General Log -->
+            <div class="formula-box mb-8">
+                <p class="font-bold text-gray-800">
+                    The General Rule for Log Base $a$:
+                </p>
+                $$ D_x[\log_a u] = \frac{u'}{u \ln a} $$
+                <p class="text-sm text-gray-500 mt-2">
+                    *Note: This formula reduces to the Natural Log rule when $a = e$, since $\ln e = 1$.*
+                </p>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-primary-blue mt-8 mb-4">
+                Worked Examples with Base $a$
+            </h3>
+
+            <div class="space-y-6">
+                <!-- Example 4: Basic Log -->
+                <div class="example-card">
+                    <h4 class="font-bold text-lg mb-2 text-gray-800">Example D: Simple General Log</h4>
+                    <p class="mb-1">
+                        Find $D_x[\log_3 x]$
+                    </p>
+                    <p class="text-sm italic text-gray-600">
+                        Here, $u = x$, $u' = 1$, and $a = 3$.
+                    </p>
+                    <p class="mt-2 font-mono bg-gray-50 p-2 rounded">
+                        $$ D_x[\log_3 x] = \frac{1}{x \ln 3} $$
+                    </p>
+                </div>
+
+                <!-- Example 5: Log with Linear Inside -->
+                <div class="example-card">
+                    <h4 class="font-bold text-lg mb-2 text-gray-800">Example E: Log with Chain Rule</h4>
+                    <p class="mb-1">
+                        Find $D_x[\log_7 (5 - 2x)]$
+                    </p>
+                    <p class="text-sm italic text-gray-600">
+                        Here, $u = 5 - 2x$, $u' = -2$, and $a = 7$.
+                    </p>
+                    <p class="mt-2 font-mono bg-gray-50 p-2 rounded">
+                        $$ D_x[\log_7 (5 - 2x)] = \frac{-2}{(5 - 2x) \ln 7} $$
+                    </p>
+                </div>
+
+                <!-- Example 6: Log with Trig Inside -->
+                <div class="example-card">
+                    <h4 class="font-bold text-lg mb-2 text-gray-800">Example F: Log with Trigonometric Inside</h4>
+                    <p class="mb-1">
+                        Find $D_x[\log_5 (\tan x)]$
+                    </p>
+                    <p class="text-sm italic text-gray-600">
+                        Here, $u = \tan x$, $u' = \sec^2 x$, and $a = 5$.
+                    </p>
+                    <p class="mt-2 font-mono bg-gray-50 p-2 rounded">
+                        $$ D_x[\log_5 (\tan x)] = \frac{\sec^2 x}{(\tan x) \ln 5} $$
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-12 pt-6 border-t border-gray-300 text-center text-sm text-gray-500">
+            <p>
+                This guide was compiled from the video transcript "(49) Derivative of Logarithmic Functions" to provide a concise, high-quality reference.
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
