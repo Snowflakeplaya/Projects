@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr, 1fr);
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+#main-container {
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+        "navbar navbar"
+        "intro intro"
+        "heading heading"
+        "project-1 project-2"
+        "project-3 project-4"
+        "contact contact"
+        "footer footer";
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    height: 10vh;
+}
+
+.intro {
+    grid-area: intro;
+    background-color: orange;
+    padding: 20px;
+    text-align: center;
+}
+.heading {
+    grid-area: heading;
+    background-color: #2196F3;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.project-1 {
+    grid-area: project-1;
+    background-color: #f44336;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.project-2 {
+    grid-area: project-2;
+    background-color: #ff9800;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.project-3 {
+    grid-area: project-3;
+    background-color: #9c27b0;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.contact {
+    grid-area: contact;
+    background-color: #00bcd4;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #607d8b;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
