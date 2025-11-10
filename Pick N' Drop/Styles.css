@@ -54,6 +54,7 @@
     background-color: white;
     scale: 1.1;
     transition: 1s;
+    cursor: pointer;
 }
 
 #contact-me {
@@ -69,6 +70,81 @@
     color: black;
     border: 1px solid black;
     transition: 1s;
+    cursor: pointer;
 }
 
 
+
+#services {
+    margin-top: 30px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-template-areas: 
+        "heading heading"
+        "service1 image1"
+        "image2 service2"
+        "service3 image3";
+}
+
+#services h1 {
+    grid-area: heading;
+    text-align: center;
+}
+
+.service-image {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    border-radius: 5px;
+}
+
+p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.carpet-cleaning {
+    grid-area: service1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.enquire {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.enquire:hover {
+    scale: 1.1;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.upholstery-cleaning {
+    grid-area: service2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.laundry-cleaning {
+    grid-area: service3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
