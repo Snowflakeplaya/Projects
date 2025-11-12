@@ -287,3 +287,40 @@ ul.main-page {
     padding: 20px;
     margin-top: 200px;
 }
+
+#about-us-section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: 100vh;
+    padding: 40px;
+    justify-content: space-between;
+}
+
+.about-us {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+#about-us-text {
+    max-width: 700px;
+    line-height: 1.6;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-image {
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    height: 80vh;
+    width: 35vw;
+}
+
+#about-us-image {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
