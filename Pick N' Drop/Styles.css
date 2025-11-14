@@ -114,7 +114,7 @@
 
 .service-image {
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     height: 250px;
     border-radius: 5px;
 }
@@ -123,6 +123,7 @@ p.service-description {
     margin-top: 15px;
     margin-bottom: 15px;
     font-size: 20px;
+    color: #555;
 }
 
 .carpet-cleaning {
@@ -158,6 +159,7 @@ p.service-description {
     flex-direction: column;
     justify-content: center;
     margin-left: 10px;
+    width: 100%;
 }
 
 .laundry-cleaning {
@@ -166,6 +168,31 @@ p.service-description {
     flex-direction: column;
     justify-content: center;
     margin-left: 10px;
+}
+
+@media only screen and (min-width: 1200px) {
+    .carpet-cleaning, #services h1, .upholstery-cleaning, .laundry-cleaning {
+        font-size: 40px;
+        max-width: 90%;
+    }
+
+    p.service-description {
+        font-size: 30px;
+    }
+
+    .service-image {
+        height: 400px;
+    }
+
+    .enquire {
+        width: 120px;
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    #services {
+        padding-left: 50px;
+    }
 }
 
 #cleaning-packages-heading {
@@ -293,8 +320,8 @@ ul.main-page {
     gap: 20px;
     align-items: center;
     height: 100vh;
-    padding: 40px;
-    justify-content: space-between;
+    padding: 20px;
+    justify-content: space-around;
 }
 
 .about-us {
@@ -305,10 +332,11 @@ ul.main-page {
 #about-us-text {
     max-width: 700px;
     line-height: 1.6;
-    height: 80vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
 
 .about-image {
@@ -323,4 +351,53 @@ ul.main-page {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+#contact-us {
+    margin-top: 60px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin-left:5vw;
+}
+
+.first-last-name {
+    display: flex;
+    margin-bottom: 15px;
+    gap: 20px;
+}
+
+#first-name, #last-name, #email-address, #message {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.submit-button {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.submit-button:hover {
+    scale: 1.1;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    transition: 1s;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1200px) {
+    #about-us-text {
+        font-size: 20px;
+    }
 }
