@@ -446,6 +446,14 @@ ul.main-page {
             "image3";
     }
 
+    #Package-prices {
+        flex-direction: column;
+    }
+
+    .cleaning-package {
+        width: 60%;
+    }
+
     #contact-us {
         width: 95%;
         margin-left: 0;
