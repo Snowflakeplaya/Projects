@@ -353,6 +353,42 @@ ul.main-page {
     justify-content: flex-end;
 }
 
+@media only screen and (max-width: 992px) {
+    #about-us-section {
+        flex-direction: column;
+        height: auto; 
+        padding: 50px 20px; 
+    }
+
+    #about-us-text {
+        height: auto;
+        order: 1;
+    }
+
+    #about-us-image {
+        /* Remove the rigid height */
+        height: auto; 
+        
+        /* Center the image container */
+        justify-content: center; 
+        width: 100%;
+        order: 1; /* Optional: Show image *before* the text */
+    }
+
+    .about-image {
+        /* Remove rigid viewport units. 
+          Make it fill most of the container. 
+        */
+        width: 90%; 
+        
+        /* Let the height adjust automatically */
+        height: auto; 
+        
+        /* Set a max-width so it doesn't get huge */
+        max-width: 450px; 
+    }
+}
+
 #contact-us {
     margin-top: 60px;
     padding: 20px;
