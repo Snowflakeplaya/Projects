@@ -28,6 +28,27 @@
     color: #000;
 }
 
+.hamburger-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger-button .bar {
+    display:block;
+    width: 2rem;
+    height: 0.25rem;
+    background-color: black;
+    border-radius: 10px;
+}
+
 .nav-link-container {
     display: flex;
     margin-left: auto;
@@ -354,6 +375,41 @@ ul.main-page {
 }
 
 @media only screen and (max-width: 992px) {
+    .hamburger-button {
+        display: flex;
+        position: fixed;
+        left: 20px;
+    }
+
+    #navbar {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav-link-container {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 0;
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .nav-link-container.is-active {
+        left: 0;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
     #about-us-section {
         flex-direction: column;
         height: auto; 
@@ -366,26 +422,33 @@ ul.main-page {
     }
 
     #about-us-image {
-        /* Remove the rigid height */
         height: auto; 
-        
-        /* Center the image container */
         justify-content: center; 
         width: 100%;
-        order: 1; /* Optional: Show image *before* the text */
+        order: 1;
     }
 
     .about-image {
-        /* Remove rigid viewport units. 
-          Make it fill most of the container. 
-        */
         width: 90%; 
-        
-        /* Let the height adjust automatically */
         height: auto; 
-        
-        /* Set a max-width so it doesn't get huge */
-        max-width: 450px; 
+        max-width: 450px;
+    }
+
+    #services {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "heading"
+            "service1"
+            "image1"
+            "service2"
+            "image2"
+            "service3"
+            "image3";
+    }
+
+    #contact-us {
+        width: 95%;
+        margin-left: 0;
     }
 }
 
@@ -394,7 +457,6 @@ ul.main-page {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    width: 60vw;
     margin-left:5vw;
 }
 
@@ -435,5 +497,9 @@ ul.main-page {
 @media only screen and (min-width: 1200px) {
     #about-us-text {
         font-size: 20px;
+    }
+
+    #contact-us {
+        width: 50%;
     }
 }
