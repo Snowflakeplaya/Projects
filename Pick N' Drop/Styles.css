@@ -458,6 +458,24 @@ ul.main-page {
         width: 95%;
         margin-left: 0;
     }
+
+    #contact-me {
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: black;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+    #contact-me:hover {
+    scale: 1.1;
+    color: black;
+    border: 1px solid black;
+    background-color: white;
+    transition: 1s;
+    cursor: pointer;
+}
 }
 
 #contact-us {
