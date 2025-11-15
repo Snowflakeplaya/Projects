@@ -214,6 +214,14 @@ p.service-description {
     #services {
         padding-left: 50px;
     }
+
+    #about-us-text {
+        font-size: 20px;
+    }
+
+    #contact-us {
+        width: 50%;
+    }
 }
 
 #cleaning-packages-heading {
@@ -518,14 +526,4 @@ ul.main-page {
     border: 1px solid black;
     transition: 1s;
     cursor: pointer;
-}
-
-@media only screen and (min-width: 1200px) {
-    #about-us-text {
-        font-size: 20px;
-    }
-
-    #contact-us {
-        width: 50%;
-    }
 }
