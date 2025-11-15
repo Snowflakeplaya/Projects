@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (hamburgerButton && navMenu) {
     hamburgerButton.addEventListener("click", () => {
       navMenu.classList.toggle("is-active");
+
+      hamburgerButton.classList.toggle("is-active"); /*Toggle hamburger animation */
     });
   }
 });

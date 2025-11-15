@@ -47,6 +47,22 @@
     height: 0.25rem;
     background-color: black;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition for animation */
+}
+
+/* Rotate the top bar */
+.hamburger-button.is-active .bar:nth-child(1) {
+    transform: translateY(0.875rem) rotate(45deg);
+}
+
+/* Fade out the middle bar */
+.hamburger-button.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+/* Rotate the bottom bar */
+.hamburger-button.is-active .bar:nth-child(3) {
+    transform: translateY(-0.875rem) rotate(-45deg);
 }
 
 .nav-link-container {
@@ -112,8 +128,6 @@
     transition: 1s;
     cursor: pointer;
 }
-
-
 
 #services {
     margin-top: 60px;
