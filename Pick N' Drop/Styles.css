@@ -432,6 +432,10 @@ ul.main-page {
         margin-bottom: 30px;
     }
 
+    .Intro h3 {
+        font-size: 16px;
+    }
+
     #about-us-section {
         flex-direction: column;
         height: auto; 
