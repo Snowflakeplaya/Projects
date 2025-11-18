@@ -470,6 +470,8 @@ ul.main-page {
             "image2"
             "service3"
             "image3";
+        max-width: 400px;
+        margin: 0 auto;
     }
 
     #Package-prices {
