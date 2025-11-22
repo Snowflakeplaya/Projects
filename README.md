@@ -52,3 +52,17 @@ The project focuses on **maintainability** and **Scalability**. Instead of dupli
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
+## 📂 Project Structure
+
+```text
+├── 📄 Pick N' Drop.html          # Main Homepage
+├── 📄 Pick N' Drop About Us.html # About Us Page
+├── 📄 navbar.html                # Reusable Navbar Component
+├── 📄 footer.html                # Reusable Footer Component
+├── 🎨 Styles.css                 # Main Stylesheet (Responsive)
+├── ⚙️ script.js                  # Logic for fetch() and Mobile Menu
+└── 📄 README.md                  # Documentation
+
+## Author
+Ntsako Glen Maluleke
